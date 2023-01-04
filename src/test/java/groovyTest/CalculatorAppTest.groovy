@@ -2,6 +2,7 @@ package groovyTest
 
 import com.example.demo1.CalculatorApp
 import spock.lang.Specification
+import spock.lang.Unroll
 
 
 class CalculatorAppTest extends Specification {
@@ -48,14 +49,58 @@ class CalculatorAppTest extends Specification {
         count++
     }
 
-
     def "addition with valid inputs return expected result"() {
         println("add")
         when:
             result = app.add(input1, input2)
+            println("input1 = "+input1+" input2 = "+input2+" result = "+result)
         then:
-            result == 60
+            result == expectedResult
+        /**
+         * where is use to give multiple input to test cases
+         * this is mostly used for overloading methods
+         * for input use single pipeline ('|')
+         * for output u can use single and double both
+         * by convention you use single pipeline for input and double pipeline for output.
+         * this method is called Datatables
+         * data tables can be used to hold any type of variables, classes, objects, enums, etc.
+        */
+        where:
+            input1|input2|expectedResult
+            10|25|35
+            -5|25||20
         }
+
+    /**
+     * Unroll annotation give different test case into report.
+     * */
+    @Unroll
+    def "sample parameterized test"() {
+        given:
+        def app = new CalculatorApp()
+        when:
+        def resultSum = app.add(input1, input1)
+        then:
+        resultSum == 2 * input1
+        where:
+        input1 |input2  |expectedResult
+        10     |15      |25
+        -4     |6       |2
+        -32    |12      |-20
+    }
+
+    def "size of #input1 should be #expectedCount"() {
+        when:
+        def actualCount = input1.size()
+        then:
+        actualCount == expectedCount
+        where:
+        input1                                      ||expectedCount
+        ["hello","world","happy","programming"]     ||4
+        ["spock","data-driven","testing"]           ||3
+    }
+    
+    
     def "multiplication with valid inputs return expected result"() {
         println("multi")
         when:
