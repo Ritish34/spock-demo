@@ -21,4 +21,17 @@ class StudentReportGeneratorSpyTest extends Specification {
         1*spiedStudentDatabase.getStudentGrade(_ as String) >> "A"
     }
 
+    def "illustrate spies with real method call"() {
+        
+        given:
+        StudentDatabase spiedStudentDatabase = Spy(StudentDatabase.class)
+        def studentReportGenerator = new  StudentReportGenerator(spiedStudentDatabase)
+        
+        when:
+        def grade = studentReportGenerator.calculateStudentGrade("123")
+        
+        then:
+        grade == "B"
+        1*spiedStudentDatabase.getStudentGrade("123")
+    }
 }
