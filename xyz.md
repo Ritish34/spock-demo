@@ -1,41 +1,3 @@
-<!-- Output copied to clipboard! -->
-
-<!-----
-
-You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
-* ERRORs: 0
-* WARNINGs: 0
-* ALERTS: 2
-
-Conversion time: 1.176 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β34
-* Sun Jan 08 2023 22:04:06 GMT-0800 (PST)
-* Source doc: Spock Test-Cases
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
-
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 2.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
 
 ## Introduction 
 
@@ -120,15 +82,10 @@ Output:
 
 You see Test Case Passed successfully.
 
-
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
 ![Screenshot from 2023-01-06 12-23-45](https://user-images.githubusercontent.com/100900132/211250522-6eb30448-264a-4605-a598-924af47e5544.png)
 
 
-Controller Test-cases
+## **Controller Test-cases**
 
 After Simple Test Case We are going to do Controller Testing.
 
@@ -176,7 +133,7 @@ Here we use the **‘expect’ keyword** for testing.
 
 Same this way we have **other keyword pairs**
 
-**Given-when-then**
+## **Given-when-then**
 
 Given = given values or for the particular method you want to add value
 
@@ -213,7 +170,7 @@ def "check case-insensitive equality of 2 strings"() {
 ```
 
 
-Important Functions 
+## **Important Functions** 
 
 Here We Have 4 Methods used to define global or redundant code.
 
@@ -244,7 +201,7 @@ def cleanup() {
 }
 ```
 
-
+## **Spock-Reports**
 Using Spock You can generate reports too
 
 For that, we have to add 3 dependencies into pom.xml
@@ -279,15 +236,12 @@ Then build -> spock-reports -> index.html you can find reports for test cases yo
 (For Reference you see the below image.)
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![Screenshot from 2023-01-09 11-30-52](https://user-images.githubusercontent.com/100900132/211250745-081b851f-f735-4e23-86bb-65a5ecaeace2.png)
 
 
-Mocking and Stubbing
 
+# **Mocking and Stubbing**
+## **Mocking**
 For mocking you have to use the Mock() method 
 
 
@@ -310,6 +264,7 @@ For a mock example refer to the GitHub link.
 
 Link = [https://github.com/Ritish34/spock-demo](https://github.com/Ritish34/spock-demo)
 
+## **Stubbing**
 Stubbing is nothing but setting up pre-defined or canned responses on the Mock invocations to test the different flows/scenarios of the application under test.
 
 A Stub is like a Mock which in a way emulates the behaviour of the real object. You can simply call it a programmed Mock.
