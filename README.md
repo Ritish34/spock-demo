@@ -260,9 +260,9 @@ With Mocks, you don’t have to do a lot of setups, but you can validate the int
 * What was the total count of invocations etc?
 * Ascertaining the order of mocks.
 
-For a mock example refer to the GitHub link.
+For a mock example refer to the abow example.
 
-Link = [https://github.com/Ritish34/spock-demo](https://github.com/Ritish34/spock-demo)
+Google Doc Link = [Spock-Test-Cases-Doc](https://docs.google.com/document/d/1XEU1x7V2tvS1DTKwOUtdjaR82uxiBXHzEUbHHjo43_U/edit#heading=h.d230331w52nl "Doc")
 
 ## **Stubbing**
 Stubbing is nothing but setting up pre-defined or canned responses on the Mock invocations to test the different flows/scenarios of the application under test.
