@@ -125,7 +125,7 @@ You see Test Case Passed successfully.
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image1.png "image_tooltip")
+![alt text](https://github.com/Ritish34/spock-demo/blob/image/Screenshot from 2023-01-06 12-23-45.png?raw=true)
 
 
 Controller Test-cases
