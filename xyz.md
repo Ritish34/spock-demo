@@ -1,3 +1,5 @@
+<!-- Output copied to clipboard! -->
+
 <!-----
 
 You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
@@ -5,7 +7,7 @@ You have some errors, warnings, or alerts. If you are using reckless mode, turn 
 * WARNINGs: 0
 * ALERTS: 2
 
-Conversion time: 1.089 seconds.
+Conversion time: 1.176 seconds.
 
 
 Using this Markdown file:
@@ -18,7 +20,7 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β34
-* Sun Jan 08 2023 21:51:44 GMT-0800 (PST)
+* Sun Jan 08 2023 22:04:06 GMT-0800 (PST)
 * Source doc: Spock Test-Cases
 * This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
 
