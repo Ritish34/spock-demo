@@ -272,3 +272,4 @@ A Stub is like a Mock which in a way emulates the behaviour of the real object. 
 **Syntax:**
 
 StubbedObject.StubbedMethod(argument list) >> “Stubbed Response”
+
