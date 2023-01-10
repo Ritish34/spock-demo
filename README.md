@@ -287,6 +287,15 @@ Registers mock/stub/spy as a spring bean in the test context.
 To use @SpringBean you have to use a strongly typed field def or the Object won’t work. You also need to directly assign the Mock/Stub/Spy to the field using the standard Spock syntax. You can even use the initializer blocks to define common behaviour however, they are only picked up once they are attached to the Specification.
 @SpringBean definitions can replace existing Beans in your ApplicationContext.
 
+For this we have to add one more dependency
+```
+<dependency>
+   <groupId>org.spockframework</groupId>
+   <artifactId>spock-spring</artifactId>
+   <version>2.3-groovy-4.0</version>
+</dependency>
+```
+
 **Example:**
 
 ```
