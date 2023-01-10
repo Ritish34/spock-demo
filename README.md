@@ -238,7 +238,9 @@ Then build -> spock-reports -> index.html you can find reports for test cases yo
 
 ![Screenshot from 2023-01-09 11-30-52](https://user-images.githubusercontent.com/100900132/211250745-081b851f-f735-4e23-86bb-65a5ecaeace2.png)
 
+Below ScreenShot Showing Index.html
 
+![Screenshot from 2023-01-10 12-02-09](https://user-images.githubusercontent.com/100900132/211544085-0c8cdf10-142f-4b42-8990-5b3d36a0f739.png)
 
 # **Mocking and Stubbing**
 ## **Mocking**
@@ -273,3 +275,45 @@ A Stub is like a Mock which in a way emulates the behaviour of the real object. 
 
 StubbedObject.StubbedMethod(argument list) >> “Stubbed Response”
 
+Here we are using @WebMvcTest annotation and @MockMvc for calling the rest API.
+
+In a later version of 3.0 spring boot, you have to mention your main runner class (springbootaplication annotation class)
+
+Here in the example we use @SpringBean for adding bean.
+
+### **SpringBean Annotation**
+
+Registers mock/stub/spy as a spring bean in the test context.
+To use @SpringBean you have to use a strongly typed field def or the Object won’t work. You also need to directly assign the Mock/Stub/Spy to the field using the standard Spock syntax. You can even use the initializer blocks to define common behaviour however, they are only picked up once they are attached to the Specification.
+@SpringBean definitions can replace existing Beans in your ApplicationContext.
+
+**Example:**
+
+```
+@ContextConfiguration(classes = Demo1Application)
+@WebMvcTest
+class HelloTest extends Specification {
+ 
+   @Autowired
+   protected MockMvc mvc
+ 
+   @SpringBean
+   HelloService helloService = Stub(){
+       greeting() >> "Stubbed data"
+   }
+   def "when get is performed then the response has status 200 
+and service method calls"() {
+ 
+       when : "Calls Method"
+       def result = 
+mvc.perform(MockMvcRequestBuilders.get("/greeting"))
+ 
+       then : "check value"
+       result.andExpect(status().isOk())
+ 
+       and : "check for stubbed string"
+       result.andReturn().response
+.contentAsString == "Stubbed data"
+   }
+
+```
